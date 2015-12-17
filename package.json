@@ -9,7 +9,7 @@
     "url": "git://github.com/marmelab/ng-admin.git"
   },
   "devDependencies": {
-    "admin-config": "git://github.com/KonstantinYegupov/admin-config.git#dfd5a71",
+    "admin-config": "git://github.com/RichardBradley/admin-config.git#5d23a39",
     "angular": "~1.3.15",
     "angular-bootstrap": "^0.12.0",
     "angular-mocks": "1.3.14",
