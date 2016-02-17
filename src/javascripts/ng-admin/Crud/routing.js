@@ -59,6 +59,7 @@ function routing($stateProvider) {
                 filterEntries: ['dataStore', 'view', 'filterData', function (dataStore, view, filterData) {
                     const filters = view.getFilterReferences(false);
                     for (var name in filterData) {
+                        if (!filterData.hasOwnProperty(name)) continue;
                         Entry.createArrayFromRest(
                             filterData[name],
                             [filters[name].targetField()],
@@ -103,6 +104,7 @@ function routing($stateProvider) {
                         referenceEntries: ['dataStore', 'view', 'referenceData', function (dataStore, view, referenceData) {
                             const references = view.getReferences();
                             for (var name in referenceData) {
+                                if (!referenceData.hasOwnProperty(name)) continue;
                                 Entry.createArrayFromRest(
                                     referenceData[name],
                                     [references[name].targetField()],
@@ -170,6 +172,7 @@ function routing($stateProvider) {
                 referenceEntries: ['dataStore', 'view', 'referenceData', function (dataStore, view, referenceData) {
                     const references = view.getReferences();
                     for (var name in referenceData) {
+                        if (!referenceData.hasOwnProperty(name)) continue;
                         Entry.createArrayFromRest(
                             referenceData[name],
                             [references[name].targetField()],
@@ -184,6 +187,7 @@ function routing($stateProvider) {
                 referencedListEntries: ['dataStore', 'view', 'referencedListData', function (dataStore, view, referencedListData) {
                     const referencedLists = view.getReferencedLists();
                     for (var name in referencedLists) {
+                        if (!referencedLists.hasOwnProperty(name)) continue;
                         Entry.createArrayFromRest(
                             referencedListData[name],
                             referencedLists[name].targetFields(),
@@ -209,6 +213,7 @@ function routing($stateProvider) {
                     Object.keys(referencedLists).map(referencedListName => {
                         const references = referencedLists[referencedListName].getReferences();
                         for (var name in references) {
+                            if (!references.hasOwnProperty(name)) continue;
                             if (!referenceDataForReferencedLists[referencedListName][name]) continue;
                             Entry.createArrayFromRest(
                                 referenceDataForReferencedLists[referencedListName][name],
@@ -263,6 +268,7 @@ function routing($stateProvider) {
                 choiceEntries: ['dataStore', 'view', 'choiceData', function (dataStore, view, filterData) {
                     const choices = view.getReferences(false);
                     for (var name in filterData) {
+                        if (!filterData.hasOwnProperty(name)) continue;
                         Entry.createArrayFromRest(
                             filterData[name],
                             [choices[name].targetField()],
@@ -314,6 +320,7 @@ function routing($stateProvider) {
                 referenceEntries: ['dataStore', 'view', 'referenceData', function (dataStore, view, referenceData) {
                     const references = view.getReferences();
                     for (var name in referenceData) {
+                        if (!referenceData.hasOwnProperty(name)) continue;
                         Entry.createArrayFromRest(
                             referenceData[name],
                             [references[name].targetField()],
@@ -328,6 +335,7 @@ function routing($stateProvider) {
                 referencedListEntries: ['dataStore', 'view', 'referencedListData', function (dataStore, view, referencedListData) {
                     const referencedLists = view.getReferencedLists();
                     for (var name in referencedLists) {
+                        if (!referencedLists.hasOwnProperty(name)) continue;
                         Entry.createArrayFromRest(
                             referencedListData[name],
                             referencedLists[name].targetFields(),
@@ -346,6 +354,7 @@ function routing($stateProvider) {
                 choiceEntries: ['dataStore', 'view', 'choiceData', function (dataStore, view, filterData) {
                     const choices = view.getReferences(false);
                     for (var name in filterData) {
+                        if (!filterData.hasOwnProperty(name)) continue;
                         Entry.createArrayFromRest(
                             filterData[name],
                             [choices[name].targetField()],
@@ -367,6 +376,7 @@ function routing($stateProvider) {
                     Object.keys(referencedLists).map(referencedListName => {
                         const references = referencedLists[referencedListName].getReferences();
                         for (var name in references) {
+                            if (!references.hasOwnProperty(name)) continue;
                             if (!referenceDataForReferencedLists[referencedListName][name]) continue;
                             Entry.createArrayFromRest(
                                 referenceDataForReferencedLists[referencedListName][name],

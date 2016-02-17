@@ -39,6 +39,7 @@ export default function maExportToCsvButton ($stateParams, Papa, notification, A
                     .then(referenceData => {
                         const references = exportView.getReferences();
                         for (var name in referenceData) {
+                            if (!referenceData.hasOwnProperty(name)) continue;
                             AdminDescription.getEntryConstructor().createArrayFromRest(
                                 referenceData[name],
                                 [references[name].targetField()],
