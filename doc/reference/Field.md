@@ -5,21 +5,21 @@ A field is the representation of a property of an entity.
 * [General Field Settings](#general-field-settings)
 * `string` Field Type
 * `text` Field Type
-* [`wysiwyg` Field Type](#-wysiwyg-field-type)
+* [`wysiwyg` Field Type](#wysiwyg-field-type)
 * `password` Field Type
 * `email` Field Type
-* [`date` Field Type](#-date-field-type)
-* [`datetime` Field Type](#-datetime-field-type)
-* [`number` Field Type](#-number-field-type)
+* [`date` Field Type](#date-field-type)
+* [`datetime` Field Type](#datetime-field-type)
+* [`number` Field Type](#number-field-type)
 * `float` Field Type
-* [`boolean` Field Type](#-boolean-field-type)
-* [`choice` and `choices` Field Types](#-choice-and-choices-field-types)
+* [`boolean` Field Type](#boolean-field-type)
+* [`choice` and `choices` Field Types](#choice-and-choices-field-types)
 * `json` Field Type
-* [`file` Field Type](#-file-field-type)
-* [`reference` Field Type](#-reference-field-type)
-* [`referenced_list` Field Type](#-referenced-list-field-type)
-* [`embedded_list` Field Type](#-embedded-list-field-type)
-* [`reference_many` Field Type](#-reference-many-field-type)
+* [`file` Field Type](#file-field-type)
+* [`reference` Field Type](#reference-field-type)
+* [`referenced_list` Field Type](#referenced-list-field-type)
+* [`embedded_list` Field Type](#embedded-list-field-type)
+* [`reference_many` Field Type](#reference-many-field-type)
 
 ## General Field Settings
 
@@ -53,7 +53,11 @@ Create a new field of the given type. Default type is 'string', so you can omit 
 Define the label of the field. Defaults to the uppercased field name.
 
 * `editable(boolean)`
-Define if the field is editable in the edition form. Usefult to display a field without allowing edition (e.g for creation date).
+Define if the field is editable in the edition form. Useful to display a field without allowing edition (e.g for creation date).
+
+* `sortable(boolean)`
+Define if the field is sortable in the list view (default `true`).
+(See ["Sort Columns and Sort Order"](../API-mapping.md#sort-columns-and-sort-order) for a discussion of how to integrate `ng-admin` sorting with your REST backend.)
 
 * `order(number|null)`
 Define the position of the field in the view.
